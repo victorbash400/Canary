@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, User, Eye, EyeOff, AlertCircle, Loader2 } from 'lucide-react';
-import heroImage from '../../assets/download.jpeg';
+const heroImage = '/canary.webp';
 import { loginUser, registerUser } from '../../services/auth-service';
 import { useAuth } from '../../context/AuthContext';
 
