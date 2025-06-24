@@ -531,8 +531,6 @@ git push origin feature/your-innovation
 
 ### 🐦 **Canary AI - Your Intelligent News Companion**
 
-*Built with ❤️ using AWS Lambda for the AWS Lambda Hackathon 2025*
-
-**[⭐ Star this repo](https://github.com/yourusername/canary-ai-backend) | [🎬 Watch Demo](https://youtu.be/your-demo) | [🚀 Try Live Demo](https://demo-url)**
+*Built with 🍵 using AWS Lambda for the AWS Lambda Hackathon 2025*
 
 </div>
