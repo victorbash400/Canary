@@ -472,54 +472,6 @@ MAX_NEWS_ARTICLES_PER_DIGEST=10
 
 ---
 
-## 🏆 **Hackathon Judging Criteria Alignment**
-
-### **Quality of the Idea** ⭐⭐⭐⭐⭐
-- **Creativity**: First AI news assistant with conversational preference management
-- **Originality**: Novel approach combining chat UX with news curation
-- **Real-world Impact**: Solves information overload affecting millions globally
-- **Market Potential**: $10B+ news aggregation market opportunity
-
-### **Architecture & Design** ⭐⭐⭐⭐⭐
-- **100% Serverless**: Every component built on Lambda functions
-- **Best Practices**: Proper IAM, error handling, monitoring
-- **Efficient Design**: Optimized DynamoDB access patterns
-- **Scalability**: Auto-scales from 0 to millions of users
-- **Cost Effective**: Pay-per-use model vs traditional servers
-
-### **Completeness** ⭐⭐⭐⭐⭐
-- **Working Solution**: Full end-to-end functionality deployed
-- **Core Features**: Authentication, chat, news, email automation
-- **Production Ready**: Error handling, security, monitoring
-- **Documentation**: Comprehensive README and code comments
-- **Testing**: Deployed and tested in AWS environment
-
----
-
-## 🎬 **Demo Video Script**
-
-> 📹 **3-Minute Demo Structure**
-
-**[0:00-0:30] Problem Introduction**
-- Show information overload statistics
-- Demonstrate current news app frustrations
-
-**[0:30-1:30] Canary AI Solution**
-- Live demo of conversational interface
-- Show AI learning user preferences in real-time
-- Demonstrate personalized news feed generation
-
-**[1:30-2:30] AWS Lambda Architecture**
-- Show serverless dashboard with auto-scaling
-- Demonstrate cost efficiency vs traditional servers
-- Highlight Lambda function execution in real-time
-
-**[2:30-3:00] Results & Impact**
-- Show performance metrics and user satisfaction
-- Highlight hackathon technical achievements
-- Call to action for judges
-
----
 
 ## 📈 **Technical Achievements**
 
@@ -563,35 +515,6 @@ git push origin feature/your-innovation
 
 ---
 
-## 🏆 **Why Canary AI Deserves to Win**
-
-### **Technical Excellence**
-✅ **Pure Serverless**: 100% Lambda-based architecture  
-✅ **Production Ready**: Deployed, tested, and scalable  
-✅ **Best Practices**: Security, monitoring, cost optimization  
-✅ **Innovation**: Novel AI + serverless + news combination  
-
-### **Real-World Impact**
-✅ **Solves Major Problem**: Information overload affects everyone  
-✅ **Immediate Value**: Users get personalized news instantly  
-✅ **Scalable Solution**: Works for 10 or 10 million users  
-✅ **Cost Effective**: 90% cheaper than traditional approaches  
-
-### **Hackathon Spirit**
-✅ **Built in Timeframe**: Complete solution in hackathon period  
-✅ **Demonstrates AWS Lambda**: Showcases serverless capabilities  
-✅ **Open Source Ready**: Community can build upon foundation  
-✅ **Future Vision**: Clear roadmap for continued innovation  
-
----
-
-## 📞 **Contact & Resources**
-
-**👨‍💻 Creator**: [Your Name]  
-**📧 Email**: your.email@domain.com  
-**🐙 GitHub**: https://github.com/yourusername/canary-ai-backend  
-**🎬 Demo Video**: https://youtu.be/your-demo-video  
-**🌐 Live Demo**: https://canary-ai-demo.com  
 
 ### **AWS Resources Used**
 - ⚡ **AWS Lambda**: Core compute platform
