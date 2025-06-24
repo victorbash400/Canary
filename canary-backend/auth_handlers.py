@@ -7,7 +7,6 @@ import hashlib
 from datetime import datetime, timedelta
 from db_helpers import DatabaseHelpers
 from utils import get_cors_headers, extract_user_from_token
-from email_preference_handlers import send_welcome_email
 
 def hash_password(password):
     """Simple password hashing for hackathon"""
@@ -49,13 +48,6 @@ def register_user(event, context):
         
         # Create user
         user = DatabaseHelpers.create_user(email, password_hash, username)
-        
-        # Send welcome email
-        try:
-            send_welcome_email(user['email'], user.get('username', user['email'].split('@')[0]))
-        except Exception as e:
-            print(f"Failed to send welcome email to {user['email']}: {e}")
-            # Don't fail registration if email fails
         
         # Generate JWT token
         token = jwt.encode({

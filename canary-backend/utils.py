@@ -1,4 +1,4 @@
-# utils.py - Utility functions
+# utils.py - Utility functions with FIXED CORS
 
 import jwt
 import os
@@ -7,15 +7,15 @@ import json
 from datetime import datetime
 
 def get_cors_headers():
-    """Get secure CORS headers with dynamic origin"""
+    """Get CORS headers for API responses - FIXED for production"""
     return {
-        'Access-Control-Allow-Origin': os.environ.get('FRONTEND_URL', '*'),
-        'Access-Control-Allow-Headers': 'Content-Type,Authorization',
-        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE',
-        'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Max-Age': '86400'
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Requested-With,Accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers',
+        'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS,HEAD,PATCH',
+        'Access-Control-Allow-Credentials': 'false',
+        'Access-Control-Max-Age': '86400',
+        'Content-Type': 'application/json'
     }
-
 
 def extract_user_from_token(event):
     """Extract user ID from JWT token"""
