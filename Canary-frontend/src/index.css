@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+/* Reset & Layout - FIXED for modals */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* REMOVED: overflow: hidden; - this was preventing modals from displaying properly */
+}
+
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Ensure root can contain fixed positioned elements */
+  position: relative;
+}
+
+/* Global Theme Namespace */
+.global-theme {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global a */
+.global-theme a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+.global-theme a:hover {
+  color: #535bf2;
+}
+
+/* Global body + buttons */
+.global-theme body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.global-theme button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.global-theme button:hover {
+  border-color: #646cff;
+}
+
+.global-theme button:focus,
+.global-theme button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  .global-theme {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  .global-theme a:hover {
+    color: #747bff;
+  }
+
+  .global-theme button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Scrollbars */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 3px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a transparent;
+}
+
+/* Animation */
+@keyframes pulse-listening {
+  0%, 100% {
+    transform: scaleX(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scaleX(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-listening {
+  animation: pulse-listening 2s infinite ease-in-out;
+}
+
+/* ADDED: Modal support styles */
+/* Ensure modals can render properly */
+.modal-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure fixed positioned elements work correctly */
+body {
+  position: relative;
+}
+
+/* Override any overflow constraints for modal areas */
+.main-content-area {
+  position: relative;
+  overflow: visible; /* Allow modals to overflow */
+}
+
+/* Ensure proper stacking context */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+}

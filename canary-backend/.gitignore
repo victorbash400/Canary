@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+*.egg
+*.manifest
+*.spec
+.Python
+
+# Virtual environments
+venv/
+ENV/
+env/
+canary-env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# Serverless
+.serverless/
+serverless.yml
+
+# Environment files
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore YAML files (general)
+*.yml
+*.yaml
