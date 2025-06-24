@@ -1,7 +1,9 @@
-// news-api.js - Fixed with proper timeouts
+// news-api.js - News API calls with proper timeouts
 const API_BASE_URL = import.meta.env.PROD 
-  ? (import.meta.env.VITE_API_URL || 'https://j1qbha86t1.execute-api.us-east-1.amazonaws.com/dev')
+  ? 'https://j1qbha86t1.execute-api.us-east-1.amazonaws.com/dev'  // Hardcoded for production
   : '/api'; // Use proxy in development
+
+console.log('NEWS API_BASE_URL:', API_BASE_URL); // Debug log
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('authToken');

@@ -1,7 +1,9 @@
 // auth-service.js - Authentication API calls
 const API_BASE_URL = import.meta.env.PROD 
-  ? (import.meta.env.VITE_API_URL || 'https://j1qbha86t1.execute-api.us-east-1.amazonaws.com/dev')
+  ? 'https://j1qbha86t1.execute-api.us-east-1.amazonaws.com/dev'  // Hardcoded for production
   : '/api';
+
+console.log('AUTH API_BASE_URL:', API_BASE_URL); // Debug log
 
 // Register new user
 export const registerUser = async (email, password, username) => {
