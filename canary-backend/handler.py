@@ -4,6 +4,15 @@ from auth_handlers import register_user, login_user, get_user_profile
 from news_handlers import get_news_feed, get_user_preferences, update_user_preferences, add_monitoring_topic, remove_monitoring_topic, get_urgent_news
 from chat_handlers import create_new_chat, get_all_chats, get_chat_by_id, save_message, get_ai_memory
 
+def cors_handler(event, context):
+    """Handle all OPTIONS requests for CORS"""
+    from utils import get_cors_headers
+    return {
+        "statusCode": 200,
+        "headers": get_cors_headers(),
+        "body": ""
+    }
+
 # Export all functions for Serverless
 __all__ = [
     # Auth functions
@@ -24,5 +33,8 @@ __all__ = [
     'get_all_chats',
     'get_chat_by_id',
     'save_message',
-    'get_ai_memory'
+    'get_ai_memory',
+    
+    # CORS handler
+    'cors_handler'
 ]

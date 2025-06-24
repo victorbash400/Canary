@@ -7,12 +7,15 @@ import json
 from datetime import datetime
 
 def get_cors_headers():
-    """Get CORS headers for API responses"""
+    """Get secure CORS headers with dynamic origin"""
     return {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-        'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS'
+        'Access-Control-Allow-Origin': os.environ.get('FRONTEND_URL', '*'),
+        'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Max-Age': '86400'
     }
+
 
 def extract_user_from_token(event):
     """Extract user ID from JWT token"""
